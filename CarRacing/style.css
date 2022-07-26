@@ -1,0 +1,205 @@
+/* ----------------------------------------------------- */
+/*Fuente*/
+@font-face {
+    font-family: bits;
+    src: url(8_bit_party.ttf);/*Tipografia de letra */
+}
+/* ----------------------------------------------------- */
+/*Texto*/
+#name{
+    font-family: 'bits', consolas;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color:#0A905D;
+    text-align: center;
+}
+#titule{
+    font-family: 'bits', consolas;
+    justify-content: center;
+    color:#69078A;
+    text-align: center;
+    font-size: 1.7rem;
+
+}
+#icon{
+   font-family: 'bits',consolas;
+   text-align: center ;
+   justify-content: center bottom;
+   font-size: 1.5rem;
+   color:#F58605;
+   animation: con 4s infinite; 
+   position: absolute;
+}
+/* ----------------------------------------------------- */
+/*Pantalla de inicio*/
+.container{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+#fond{
+    text-align: center;
+    width: 63%; /*ancho 90*/
+    height: 56%; /*altura 88%*/
+    padding: 0.63rem 1.26rem;
+
+    
+}
+/* ----------------------------------------------------- */
+/*Boton play*/
+.second{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:0.5rem;
+    left: auto;
+    right: auto;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:1rem;
+    left: auto;
+    right: auto;
+}
+#play{
+    width: 50%;
+    height:35%;
+    display: block;
+    animation: play 5s infinite;
+    cursor: pointer;
+}
+#body{
+    display: none;
+}
+/* -----------------------------
+/*Body*/
+*{
+    margin:0;
+    padding:0;
+}
+/* -----------------------------
+/*Ocultar*/
+.hide{
+    display:none;
+}
+/* -----------------------------
+/*Player and enemies*/
+.car{
+    justify-content: center;
+    height:150px;
+    border-radius: 10px;
+    width:50px;
+    position:absolute;
+    bottom:120px;
+    background:url(Recursos/Red.png);
+    background-repeat: no-repeat;
+    background-size: 50px 120px;
+}
+.enemy{
+    /*background-color: blue;*/
+    height:100px;
+    border-radius: 10px;
+    width:50px;
+    position:absolute;
+    bottom:120px;
+    background:url(car.png);
+    background-repeat: no-repeat;
+    background-size: 50px 100px;
+}
+/* -----------------------------
+/*Fondo*/
+.carGame{
+    width:100%;
+    height:100vw;
+    background: #e5ed06;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}/* -----------------------------
+/*Lineas*/
+.lines{
+    width:10px;
+    height:100px;
+    background: white;
+    position:absolute;
+    margin-left:190px;
+}
+/* -----------------------------
+/*Area de juego(pista)*/
+.gameArea{
+    height:100vh;
+    width:400px;
+    background: #2c3456;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    border-right:7px dashed #c8d6e5;
+    border-left:7px dashed #c8d6e5;
+}
+/* -----------------------------
+/*Puntaje*/
+.score{
+    position:absolute;
+    top:20px;
+    left:40px;
+    background: #1010ac;
+    widows: 300px;
+    height:70px;
+    width:120px;
+    text-align:center;
+    font-size: 1.5em;
+    color:white;
+    font-family: 'bits', consolas;
+    box-shadow: 0 5px 5px #777;
+}
+/* -----------------------------
+/*Restar*/
+.startScreen{
+    position:absolute;
+    top:50%;
+    left:50%;
+    background: #8501F7;
+    transform:translate(-50%,-50%);
+    color:#06F701;
+    z-index: 1;
+    text-align:center;
+    border:1px solid #ff6b6b;
+    padding:15px;
+    margin:auto;
+    width:50%;
+    cursor: pointer;
+    font-family: 'bits',consolas;
+    letter-spacing: 5;
+    font-size: 20px;
+    word-spacing: 3;
+    line-height: 30px;
+    text-transform: upper;
+    box-shadow: 0 5px 5px #777;
+}
+/* ----------------------------------------------------- */
+/*Animaciones*/
+@keyframes play {
+    0% {
+        transform: translateY(-1rem);
+    }
+    50% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(-1rem);
+    } 
+}
+@keyframes con{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
